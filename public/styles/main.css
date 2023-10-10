@@ -22,8 +22,6 @@ header {
 }
 
 header .itens-menu {
-  min-width: 20%;
-  width: 40%;
   margin-bottom: 1rem;
 }
 
@@ -36,8 +34,6 @@ header .itens-menu ul {
 
 header .itens-menu ul a {
   padding: 6px 25px;
-  position: relative;
-  overflow: hidden;
 }
 
 header .itens-menu ul .btn-menu {
@@ -74,13 +70,14 @@ main {
   margin-top: 1.5rem;
   background-image: url("../assets/images/home.jpg");
   background-size: cover;
-  height: 70vh;
+  height: 450px;
   position: relative;
 }
 
 #home .home-desc .home-desc-detail {
   width: 35%;
-  height: 40%;
+  height: min-content;
+  padding-bottom: 5px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -127,7 +124,6 @@ main {
 #cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 250px;
   margin-top: 6rem;
 }
 
@@ -189,7 +185,6 @@ main {
 
 #gallery {
   margin-top: 1rem;
-  height: 100vh;
 }
 
 #gallery>div {
@@ -285,7 +280,6 @@ main {
 }
 
 #propos {
-  height: 100vh;
   margin-left: 3rem;
   margin-top: 4rem;
 }
@@ -333,8 +327,8 @@ main {
 }
 
 #propos .propos-card p {
-  font-size: 1.2rem;
-  margin-top: 2.4rem;
+  font-size: 1rem;
+  margin-top: 2rem;
 }
 
 #propos .propos-lines {
@@ -379,7 +373,7 @@ main {
 }
 
 #experience .experience-all-cards .experience-card-content {
-  height: 25vh;
+  height: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 16px;
@@ -423,7 +417,6 @@ main {
   display: flex;
   align-items: center;
   margin-top: 3.5rem;
-
 }
 
 #review .container p {
@@ -454,13 +447,14 @@ main {
 
 #review .review-all-cards .review-card {
   border-radius: 7px;
-  height: 35vh;
+  height: 250px;
 }
 
 #review .review-all-cards .review-card .review-card-content {
   width: 90%;
   margin: 15% auto 0 auto;
   color: white;
+
 }
 
 #review .review-all-cards .review-card .review-card-content .review-card-content-bottom {
@@ -470,7 +464,8 @@ main {
 }
 
 #review .review-all-cards .review-card .review-card-content .review-card-content-bottom h4 {
-  width: 50%;
+  width: 70%;
+  margin-bottom: 5px;
 }
 
 #review .review-all-cards .review-card-top {
@@ -499,7 +494,6 @@ main {
 }
 
 #contact {
-  height: 70vh;
   margin-top: 6rem;
 }
 
@@ -620,7 +614,8 @@ main {
 }
 
 footer {
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
 }
 
 footer div {
@@ -649,3 +644,122 @@ header .itens-menu ul .btn-menu:hover {
   background-color: rgb(56, 169, 255);
   color: white;
 }
+
+
+/* ---------- Responsive ---------- */
+
+@media screen and (max-width: 1163px) {
+
+  #contact .container-img .container-img-bottom .container-img-bottom-content p,
+  #gallery .container-img .container-img-bottom .container-img-bottom-content p {
+    font-size: 1.6rem;
+  }
+
+  #propos .propos-cards-all {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 1085px) {
+
+  #contact .container-img .container-img-bottom .container-img-bottom-content p,
+  #gallery .container-img .container-img-bottom .container-img-bottom-content p {
+    font-size: 1.3rem;
+    width: 50%;
+  }
+
+  #propos .propos-cards-all {
+    width: 85%;
+  }
+
+  #contact .container-img .container-img-left .container-img-left-content .container-img-left-content-contact {
+    font-size: .9rem;
+    margin-top: 20px;
+  }
+
+  #propos>h2 {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  #review .review-all-cards {
+    display: flex;
+    justify-content: center;
+  }
+
+  #review .review-all-cards .review-card-top-img {
+    display: none;
+  }
+
+  #cards #cards-left {
+    margin-left: 0;
+  }
+
+  #home h1 {
+    width: 55%;
+  }
+
+  #propos .propos-lines {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 863px) {
+  #gallery .container-img .container-img-bottom .container-img-bottom-content p {
+    width: 70%;
+    font-size: 1.2rem;
+  }
+
+  #gallery>div {
+    width: 55%;
+    margin-left: 3rem;
+  }
+
+  #contact .container-img .container-img-bottom .container-img-bottom-content p {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+
+  #cards #cards-right .card-content-right {
+    height: min-content;
+    padding-bottom: 13px;
+    border-radius: 7px;
+    background-color: rgb(252, 244, 244);
+    margin-bottom: 1rem;
+  }
+
+  #propos .propos-cards-all {
+    width: 90%;
+  }
+
+  #contact .container-img .container-img-bottom .container-img-bottom-content .contact-form {
+    width: 250px;
+  }
+
+  #contact .container-img .container-img-bottom .container-img-bottom-content .contact-form input {
+    width: 250px;
+  }
+
+  #contact .container-img .container-img-left .container-img-left-content h2 {
+    font-size: 1.7rem;
+  }
+
+  #contact .container-img .container-img-both {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 20px;
+    height: 300px;
+  }
+
+  #gallery .container-img .container-img-both {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 20px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 765) {}
+
+/* Continuar do #experience*/
