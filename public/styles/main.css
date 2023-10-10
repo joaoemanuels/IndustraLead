@@ -454,7 +454,6 @@ main {
   width: 90%;
   margin: 15% auto 0 auto;
   color: white;
-
 }
 
 #review .review-all-cards .review-card .review-card-content .review-card-content-bottom {
@@ -760,6 +759,37 @@ header .itens-menu ul .btn-menu:hover {
   }
 }
 
-@media screen and (max-width: 765) {}
+@media screen and (max-width: 765px) {
+  #experience .experience-all-cards .experience-card-content .experience-card-content-center {
+    display: none;
+  }
 
-/* Continuar do #experience*/
+  #experience .experience-all-cards .experience-card-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  #propos .propos-lines {
+    width: 60%;
+    margin-left: 40%;
+  }
+
+  #review .review-all-cards .review-card {
+    height: min-content;
+  }
+
+  #review .review-all-cards .review-card .review-card-content .review-card-content-bottom h4 {
+    width: 70%;
+    font-size: .8rem;
+  }
+
+  #contact .container-img .container-img-bottom .container-img-bottom-content p {
+    font-size: 1rem;
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 609px) {}
+
+/* Continuar do #propus*/
