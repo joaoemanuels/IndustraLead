@@ -135,7 +135,7 @@ main {
 #cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  gap: 250px;
   margin-top: 6rem;
 }
 
@@ -147,7 +147,6 @@ main {
 #cards #cards-left .card-content {
   display: flex;
   align-items: center;
-
 }
 
 #cards #cards-left .card-content span {
@@ -162,17 +161,39 @@ main {
   font-size: 3rem;
   color: white;
   margin-bottom: 1rem;
-}
-#cards #cards-left .card-content .card-item p{
+  display: flex;
+  justify-content: center;
   align-items: center;
-  text-align: center;
-  margin-top: 25%;
+  font-weight: 900;
 }
 
 #cards #cards-right {
   width: 100%;
 }
 
+#cards #cards-right .card-content-right {
+  height: 200px;
+  border-radius: 7px;
+  background-color: rgb(252, 244, 244);
+  margin-bottom: 1rem;
+}
+
+#cards #cards-right .card-content-right img {
+  padding: 20px;
+  float: right;
+}
+
+#cards #cards-right .card-content-right .card-content-right-text {
+  clear: both;
+  margin-top: 4rem;
+  width: 80%;
+  margin-left: 3rem;
+}
+
+#cards #cards-right .card-content-right .card-content-right-text p {
+  margin-top: 1.5rem;
+  line-height: 1.3rem;
+}
 
 /* Animações e Transições */
 
