@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-
 }
 
 body {
@@ -52,8 +51,6 @@ header .itens-menu ul .btn-menu {
   border: none;
   transition: background-color 0.3s ease;
 }
-
-
 
 main {
   width: 85%;
@@ -105,7 +102,6 @@ main {
   margin: 0 auto;
   clear: both;
   color: white;
-
 }
 
 #home .home-desc .home-desc-detail .home-desc-detail-text h2 {
@@ -128,7 +124,7 @@ main {
 
 #home .home-text {
   margin-top: 3rem;
-  width: 40%;
+  width: 55%;
   margin-left: 3rem;
 }
 
@@ -194,6 +190,185 @@ main {
   margin-top: 1.5rem;
   line-height: 1.3rem;
 }
+
+#gallery {
+  margin-top: 1rem;
+  height: 100vh;
+}
+
+#gallery>div {
+  width: 40%;
+  margin-left: 3rem;
+}
+
+#gallery>div h2 {
+  line-height: 1.7rem;
+  font-weight: 100;
+  margin-top: .7rem;
+}
+
+#gallery .container {
+  display: flex;
+  align-items: center;
+  margin-top: 3rem;
+  width: 96.4%;
+}
+
+#gallery .container p {
+  flex-grow: 0;
+  font-size: 0.7rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#gallery .container .linha {
+  border-bottom: 1px solid #000;
+  flex-grow: 2;
+  height: 1px;
+  margin-left: 10px;
+}
+
+#gallery .container-img {
+  width: 100%;
+  margin-top: 2rem;
+  margin-left: 0;
+}
+
+#gallery .container-img .container-img-both {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 20px;
+  height: 400px;
+}
+
+#gallery .container-img .container-img-left {
+  border-radius: 7px;
+  background-color: rgb(119, 158, 193);
+}
+
+#gallery .container-img .container-img-left .container-img-left-content {
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 25%;
+  color: white;
+}
+
+#gallery .container-img .container-img-left .container-img-left-content p {
+  margin-top: 1.5rem;
+}
+
+#gallery .container-img .container-img-left .container-img-left-content span {
+  margin-top: 1rem;
+}
+
+#gallery .container-img .container-img-right {
+  border-radius: 7px;
+  background-image: url("../assets/images/gallery1.png");
+  background-size: cover;
+}
+
+#gallery .container-img .container-img-bottom {
+  margin-top: 1rem;
+  height: 130px;
+  border-radius: 7px;
+  background-color: #070707;
+  display: flex;
+  align-items: center;
+}
+
+#gallery .container-img .container-img-bottom .container-img-bottom-content {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#gallery .container-img .container-img-bottom .container-img-bottom-content p {
+  font-size: 2rem;
+  width: 70%;
+}
+
+#propos {
+  height: 100vh;
+  margin-left: 3rem;
+  margin-top: 4rem;
+}
+
+#propos>span {
+  font-size: .7rem;
+}
+
+#propos>h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  margin-top: 1.5rem;
+  width: 50%;
+}
+
+#propos .propos-cards-all {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 3rem;
+}
+
+#propos .propos-card {
+  border-radius: 7px;
+  height: 200px;
+  background-color: rgb(205, 205, 205);
+  display: flex;
+  align-items: center;
+}
+
+#propos .propos-card:nth-child(3) {
+  background-image: url("../assets/images/propos1.png");
+  background-size: cover;
+}
+
+#propos .propos-card .propos-card-content {
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+}
+
+#propos .propos-card h4 {
+  font-size: 1.2rem;
+}
+
+#propos .propos-card p {
+  font-size: 1.2rem;
+  margin-top: 2.4rem;
+}
+
+#propos .propos-lines {
+  height: 350px;
+  width: 40%;
+  margin-left: 50%;
+  margin-top: 5rem;
+}
+
+#propos .propos-lines .container p {
+  flex-grow: 0;
+  font-size: .8rem;
+  color: rgba(0, 0, 0, 0.7);
+  margin-top: 1rem;
+}
+
+#propos .propos-lines .container .linha {
+  border-bottom: 1px solid #000;
+  flex-grow: 2;
+  height: 1px;
+  margin-left: 10px;
+  margin-top: .5rem;
+}
+
+
+
+
+
+
+
 
 /* Animações e Transições */
 
