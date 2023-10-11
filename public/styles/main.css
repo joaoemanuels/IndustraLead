@@ -732,10 +732,7 @@ header .itens-menu ul .btn-menu:hover {
     width: 90%;
   }
 
-  #contact .container-img .container-img-bottom .container-img-bottom-content .contact-form {
-    width: 250px;
-  }
-
+  #contact .container-img .container-img-bottom .container-img-bottom-content .contact-form,
   #contact .container-img .container-img-bottom .container-img-bottom-content .contact-form input {
     width: 250px;
   }
@@ -756,6 +753,10 @@ header .itens-menu ul .btn-menu:hover {
     grid-template-columns: 1.1fr 1fr;
     gap: 20px;
     height: 400px;
+  }
+
+  #review .review-copy h3:nth-child(2) {
+    display: none;
   }
 }
 
@@ -790,6 +791,82 @@ header .itens-menu ul .btn-menu:hover {
   }
 }
 
-@media screen and (max-width: 609px) {}
+@media screen and (max-width: 609px) {
+  #home .home-desc .home-desc-detail {
+    width: 45%;
+  }
 
-/* Continuar do #propus*/
+  #cards {
+    grid-template-columns: 1fr;
+  }
+
+  #propos .propos-cards-all {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #propos .propos-cards-all .propos-card:nth-child(3) {
+    display: none;
+  }
+
+  #propos .propos-lines {
+    width: 70%;
+    margin-left: 30%;
+  }
+
+  #review .review-all-cards .review-card:nth-child(3) {
+    display: none;
+  }
+
+  #gallery .container {
+    width: 90%;
+  }
+
+  #contact .container-img .container-img-bottom .container-img-bottom-content .contact-form,
+  #contact .container-img .container-img-bottom .container-img-bottom-content .contact-form input {
+    width: 180px;
+  }
+}
+
+@media screen and (max-width: 537px) {
+  #review .review-copy h3:nth-child(2) {
+    display: none;
+  }
+
+  #propos>h2 {
+    font-size: 1.5rem;
+  }
+
+  #contact .container-img .container-img-left .container-img-left-content .container-img-left-content-contact {
+    font-size: .8rem;
+  }
+
+  #propos .propos-lines {
+    width: 80%;
+    margin-left: 20%;
+  }
+
+  #experience .experience-all-cards .experience-card-content {
+    height: min-content;
+    padding-bottom: 10px;
+    padding-right: 10px;
+  }
+
+  #home .home-desc .home-desc-detail {
+    width: 65%;
+  }
+
+  #home h1 {
+    width: 75%;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 452) {}
+
+/* Continuar do #contact*/
+
+
+
+
+/* 494px, fazer o menu com js */
