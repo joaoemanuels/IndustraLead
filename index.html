@@ -5,22 +5,32 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="public/styles/main.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>Document</title>
 </head>
 
 <body>
   <header>
-    <div class="menu-logo">
-      <img src="#home" alt="s">
-    </div>
-    <div class="itens-menu">
-      <ul>
-        <li><a href="#cards">Services</a></li>
-        <li><a href="#gallery">Projects</a></li>
-        <li><a href="#propos">Propos</a></li>
-        <li><a href="#contact" class="btn-menu"> Contact</a></li>
-      </ul>
-    </div>
+    <nav data-menu="suave">
+      <p><a href="#home">&lsaquo;JE/&rsaquo;</a></p>
+      <button data-menu="button" aria-controls="menu"></button>
+      <div class="itens-menu">
+        <ul data-menu="list" id="menu">
+          <a href="#cards">
+            <li>Services</li>
+          </a>
+          <a href="#gallery">
+            <li>Projects</li>
+          </a>
+          <a href="#propos">
+            <li>Propos</li>
+          </a>
+          <a href="#contact" class="btn-menu">
+            <li>Contact</li>
+          </a>
+        </ul>
+      </div>
+    </nav>
   </header>
 
   <main>
@@ -341,7 +351,8 @@
 
   </main>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
+  <script src="./js/modules/vanilla-tilt.min.js"></script>
 </body>
 
 </html>
