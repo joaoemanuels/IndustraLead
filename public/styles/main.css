@@ -4,7 +4,7 @@
 
  /* -------------------- Estilos Globais -------------------- */
  :root {
-   --cor-destaque1: ;
+   --cor-principal: #1A1E29;
    --cor-destaque2: ;
    --cor-destaque3: ;
    --cor-destaque4: ;
@@ -28,6 +28,7 @@
    font-family: "Inter", sans-serif;
    letter-spacing: 1px;
    position: relative;
+   background-color: var(--cor-principal);
  }
 
  main {
@@ -47,15 +48,40 @@
    list-style-type: none;
  }
 
- h1 {}
+ h1 {
+   font-size: 2.5rem;
+   color: white;
+ }
 
- h2 {}
+ h2 {
+   font-size: 1.5rem;
+   color: white;
+   font-weight: 500;
+   line-height: 1.4rem;
+ }
 
- h3 {}
+ h3 {
+   font-size: 1rem;
+   color: rgb(0, 0, 0);
+   font-weight: 400;
+ }
 
- h4 {}
+ h4 {
+   font-size: .8rem;
+   color: white;
+   font-weight: 300;
+ }
 
- p {}
+ p {
+   font-size: .9rem;
+   color: white;
+ }
+
+ span {
+   font-size: .6rem;
+   flex-grow: 0;
+   color: rgba(255, 255, 255, 0.7);
+ }
 
 
  /* -------------------- Estilos para a barra de navegação (nav)  -------------------- */
@@ -64,8 +90,8 @@
    padding: 0 15%;
    display: flex;
    align-items: center;
-   background-color: var(--cor-destaque3);
-   border-bottom: 2px solid var(--cor-destaque4);
+   background-color: ;
+   border-bottom: 2px solid;
    font-weight: bold;
    height: 80px;
    transition: 0.3s;
@@ -102,12 +128,13 @@
 
  nav p {
    padding: 10px;
-   font-size: 1.3rem;
    width: 100%;
  }
 
  nav p a {
    transition: 0.3s;
+   color: white;
+   font-size: 1.5rem;
  }
 
  nav p a:hover {
@@ -119,11 +146,6 @@
 
  #home h2 {
    margin-top: 1rem;
-   font-weight: 500;
- }
-
- #home span {
-   font-size: .6rem;
  }
 
  #home .home-desc {
@@ -155,25 +177,14 @@
    width: 80%;
    margin: 0 auto;
    clear: both;
-   color: white;
  }
 
- #home .home-desc .home-desc-detail .home-desc-detail-text h2 {
-   font-size: 1rem;
-   font-weight: 500;
-   line-height: 1.4rem;
+ #home .home-desc .home-desc-detail .home-desc-detail-text p {
    margin-bottom: 10px;
  }
 
- #home .home-desc .home-desc-detail .home-desc-detail-text h3 {
-   font-size: 1rem;
-   font-weight: 500;
+ #home .home-desc .home-desc-detail .home-desc-detail-text span {
    margin-bottom: 6px;
- }
-
- #home .home-desc .home-desc-detail .home-desc-detail-text h4 {
-   font-size: .8rem;
-   font-weight: 500;
  }
 
  #home .home-text {
@@ -185,27 +196,28 @@
 
  /* -------------------- Estilos para as seções principais do conteúdo (article, section) -------------------- */
 
- #cards {
+ #cards .cards-both {
    display: grid;
    grid-template-columns: 1fr 1fr;
    margin-top: 6rem;
  }
 
- #cards #cards-left {
+ #cards .cards-both #cards-left {
    width: 80%;
    margin-left: 3rem;
  }
 
- #cards #cards-left .card-content {
+ #cards .cards-both #cards-left .card-content {
    display: flex;
    align-items: center;
  }
 
- #cards #cards-left .card-content span {
+ #cards .cards-both #cards-left .card-content p {
    margin-left: 1rem;
+   font-size: 1rem;
  }
 
- #cards #cards-left .card-content .card-item {
+ #cards .cards-both #cards-left .card-content .card-item {
    width: 200px;
    height: 100px;
    border-radius: 7px;
@@ -219,32 +231,37 @@
    font-weight: 900;
  }
 
- #cards #cards-right {
+ #cards .cards-both #cards-left .card-content .card-item p {
+   font-size: 3rem;
+ }
+
+ #cards .cards-both #cards-right {
    width: 100%;
  }
 
- #cards #cards-right .card-content-right {
+ #cards .cards-both #cards-right .card-content-right {
    height: 200px;
    border-radius: 7px;
    background-color: rgb(252, 244, 244);
    margin-bottom: 1rem;
  }
 
- #cards #cards-right .card-content-right img {
+ #cards .cards-both #cards-right .card-content-right img {
    padding: 20px;
    float: right;
  }
 
- #cards #cards-right .card-content-right .card-content-right-text {
+ #cards .cards-both #cards-right .card-content-right .card-content-right-text {
    clear: both;
    margin-top: 4rem;
    width: 80%;
    margin-left: 3rem;
  }
 
- #cards #cards-right .card-content-right .card-content-right-text p {
+ #cards .cards-both #cards-right .card-content-right .card-content-right-text p {
    margin-top: 1.5rem;
    line-height: 1.3rem;
+   color: black;
  }
 
 
@@ -261,7 +278,6 @@
 
  #gallery>div h2 {
    line-height: 1.7rem;
-   font-weight: 100;
    margin-top: .7rem;
  }
 
@@ -270,12 +286,6 @@
    align-items: center;
    margin-top: 3rem;
    width: 96.4%;
- }
-
- #gallery .container p {
-   flex-grow: 0;
-   font-size: 0.7rem;
-   color: rgba(0, 0, 0, 0.7);
  }
 
  #gallery .container .linha {
@@ -295,27 +305,29 @@
    display: grid;
    grid-template-columns: 1fr 1.5fr;
    gap: 20px;
-   height: 400px;
+   height: min-content;
  }
 
  #gallery .container-img .container-img-left {
    border-radius: 7px;
    background-color: rgb(119, 158, 193);
+   padding: 25px 0;
  }
 
  #gallery .container-img .container-img-left .container-img-left-content {
    width: 80%;
    margin: 0 auto;
-   margin-top: 25%;
    color: white;
  }
 
  #gallery .container-img .container-img-left .container-img-left-content p {
    margin-top: 1.5rem;
+   font-size: 1rem;
  }
 
  #gallery .container-img .container-img-left .container-img-left-content span {
    margin-top: 1rem;
+   font-size: .8rem;
  }
 
  #gallery .container-img .container-img-right {
@@ -342,7 +354,7 @@
  }
 
  #gallery .container-img .container-img-bottom .container-img-bottom-content p {
-   font-size: 2rem;
+   font-size: 1.3rem;
    width: 70%;
  }
 
@@ -354,13 +366,7 @@
    margin-top: 4rem;
  }
 
- #propos>span {
-   font-size: .7rem;
- }
-
  #propos>h2 {
-   font-size: 2rem;
-   font-weight: 300;
    margin-top: 1.5rem;
    width: 50%;
  }
@@ -392,12 +398,7 @@
    color: white;
  }
 
- #propos .propos-card h4 {
-   font-size: 1.2rem;
- }
-
  #propos .propos-card p {
-   font-size: 1rem;
    margin-top: 2rem;
  }
 
@@ -410,8 +411,6 @@
 
  #propos .propos-lines .container p {
    flex-grow: 0;
-   font-size: .8rem;
-   color: rgba(0, 0, 0, 0.7);
    margin-top: 1rem;
  }
 
@@ -432,10 +431,7 @@
    margin-top: 3rem;
  }
 
- #experience .container p {
-   flex-grow: 0;
-   font-size: 0.7rem;
-   color: rgba(0, 0, 0, 0.7);
+ #experience .container span {
    margin: 0 20px;
  }
 
@@ -455,6 +451,15 @@
    margin-bottom: 1rem;
  }
 
+ #experience .experience-all-cards .experience-card-content h4 {
+   color: rgb(0, 0, 0);
+   margin-top: 2.2rem;
+ }
+
+ #experience .experience-all-cards .experience-card-content p {
+   margin-top: .4rem;
+ }
+
  #experience .experience-all-cards .experience-card-content-first {
    margin-top: 3.3rem;
  }
@@ -466,20 +471,6 @@
 
  #experience .experience-all-cards .experience-card-content .experience-card-content-left {
    margin-left: 3rem;
- }
-
- #experience .experience-all-cards .experience-card-content .experience-card-content-left h4,
- #experience .experience-all-cards .experience-card-content .experience-card-content-center h4,
- #experience .experience-all-cards .experience-card-content .experience-card-content-right h4 {
-   font-size: .9rem;
-   color: grey;
-   margin-top: 2.2rem;
- }
-
- #experience .experience-all-cards .experience-card-content .experience-card-content-left p,
- #experience .experience-all-cards .experience-card-content .experience-card-content-center p,
- #experience .experience-all-cards .experience-card-content .experience-card-content-right p {
-   margin-top: .4rem;
  }
 
  #experience .experience-all-cards .experience-card-content .experience-card-content-left img {
@@ -495,10 +486,7 @@
    margin-top: 3.5rem;
  }
 
- #review .container p {
-   flex-grow: 0;
-   font-size: 0.7rem;
-   color: rgba(0, 0, 0, 0.7);
+ #review .container span {
    margin: 0 20px;
  }
 
@@ -511,7 +499,6 @@
  #review h1 {
    text-align: center;
    margin-top: 2rem;
-   font-weight: 400;
  }
 
  #review .review-all-cards {
@@ -563,7 +550,7 @@
    margin-top: 5rem;
  }
 
- #review .review-copy h3 {
+ #review .review-copy p {
    color: grey;
    font-size: 2rem;
  }
@@ -580,10 +567,7 @@
    align-items: center;
  }
 
- #contact .container p {
-   flex-grow: 0;
-   font-size: 0.7rem;
-   color: rgba(0, 0, 0, 0.7);
+ #contact .container span {
    margin: 0 20px 0 25px;
  }
 
@@ -614,16 +598,12 @@
  #contact .container-img .container-img-left .container-img-left-content {
    width: 80%;
    margin: 0 auto;
-   margin-top: 6rem;
+   margin-top: 3rem;
  }
 
  #contact .container-img .container-img-left .container-img-left-content h2 {
    font-size: 2rem;
    font-weight: 500;
- }
-
- #contact .container-img .container-img-left .container-img-left-content .container-img-left-content-contact {
-   font-size: .7rem;
  }
 
  #contact .container-img .container-img-left .container-img-left-content .container-img-left-content-contact .container-img-left-content-contact-form {
@@ -664,7 +644,7 @@
  }
 
  #contact .container-img .container-img-bottom .container-img-bottom-content p {
-   font-size: 2rem;
+   font-size: 1.5rem;
    width: 60%;
    margin-left: 3rem;
  }
@@ -752,7 +732,7 @@
      display: none;
    }
 
-   #cards #cards-left {
+   #cards .cards-both #cards-left {
      margin-left: 0;
    }
 
@@ -777,7 +757,7 @@
      width: 50%;
    }
 
-   #cards #cards-right .card-content-right {
+   #cards .cards-both #cards-right .card-content-right {
      height: min-content;
      padding-bottom: 13px;
      border-radius: 7px;
@@ -1050,10 +1030,6 @@
 
  /* -------------------- Outros Estilos -------------------- */
 
- body {
-   position: relative;
- }
-
  body::after {
    content: "";
    position: fixed;
@@ -1061,15 +1037,14 @@
    left: 0;
    width: 100%;
    height: 100%;
-   background-image: url('../assets/images/gradiente.png');
+
    background-repeat: repeat-y;
    background-attachment: scroll;
-   opacity: 1;
+   opacity: .9;
    pointer-events: none;
    filter: grayscale(100%);
    z-index: -1;
  }
-
 
 
  ::-webkit-scrollbar {
