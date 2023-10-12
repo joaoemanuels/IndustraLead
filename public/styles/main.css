@@ -33,7 +33,7 @@
 
  main {
    width: 85%;
-   margin: 0 auto;
+   margin: 90px auto 0 auto;
  }
 
 
@@ -89,17 +89,18 @@
  nav {
    padding: 0 15%;
    display: flex;
+   justify-content: space-between;
    align-items: center;
-   background-color: ;
-   border-bottom: 2px solid;
    font-weight: bold;
    height: 80px;
+   top: 0;
+   left: 0;
+   width: 100%;
    transition: 0.3s;
-
- }
-
- nav.fixed {
-   box-shadow: 0 4px 4px rgba(0, 0, 0, .3);
+   position: fixed;
+   backdrop-filter: blur(60px);
+   z-index: 2;
+   box-shadow: -10px 5px 10px 5px rgba(0, 0, 0, 0.5);
  }
 
  nav .itens-menu ul {
@@ -156,6 +157,7 @@
    background-size: cover;
    height: 450px;
    position: relative;
+   z-index: 1;
  }
 
  #home .home-desc .home-desc-detail {
@@ -166,12 +168,15 @@
    bottom: 0;
    right: 0;
    border-radius: 7px;
-   backdrop-filter: blur(50px); 
-  }
+   backdrop-filter: blur(50px);
+ }
 
  #home .home-desc .home-desc-detail img {
-   padding: 20px;
+   padding: 15px 15px 4px 15px;
+   margin-bottom: 15px;
    float: right;
+   width: 100px;
+   border-bottom: 1px solid var(--cor-principal-text);
  }
 
  #home .home-desc .home-desc-detail .home-desc-detail-text {
@@ -280,6 +285,11 @@
    margin-left: 3rem;
  }
 
+ #gallery>div img {
+   width: 70px;
+   height: auto;
+ }
+
  #gallery>div h2 {
    line-height: 1.7rem;
    margin-top: .7rem;
@@ -354,6 +364,7 @@
    color: white;
    display: flex;
    justify-content: space-between;
+   align-items: center;
    width: 90%;
    margin: 0 auto;
  }
@@ -361,6 +372,10 @@
  #gallery .container-img .container-img-bottom .container-img-bottom-content p {
    font-size: 1.3rem;
    width: 70%;
+ }
+
+ #gallery .container-img .container-img-bottom .container-img-bottom-content img {
+   width: 90px;
  }
 
 
@@ -447,7 +462,8 @@
  }
 
  #experience .experience-all-cards .experience-card-content {
-   height: 200px;
+   height: min-content;
+   padding: 15px 0;
    display: grid;
    grid-template-columns: 1fr 1fr 1fr;
    gap: 16px;
@@ -458,7 +474,11 @@
 
  #experience .experience-all-cards .experience-card-content h4 {
    color: var(--cor-principal-text);
-   margin-top: 2.2rem;
+   margin-top: 1rem;
+ }
+
+ #experience .experience-all-cards .experience-card-content img {
+   width: 70px;
  }
 
  #experience .experience-all-cards .experience-card-content p {
@@ -480,6 +500,10 @@
 
  #experience .experience-all-cards .experience-card-content .experience-card-content-left img {
    margin-top: .7rem;
+ }
+
+ #experience .experience-all-cards .experience-card-content .experience-card-content-right {
+   margin-right: 3rem;
  }
 
 
@@ -561,6 +585,7 @@
  #review .review-copy p {
    color: grey;
    font-size: 2rem;
+   user-select: none;
  }
 
 
@@ -621,12 +646,14 @@
  }
 
  #contact .container-img .container-img-left .container-img-left-content .container-img-left-content-contact .container-img-left-content-contact-form h3 {
-   margin-left: .3rem;
+   margin-left: .5rem;
    color: white;
  }
 
- #contact .container-img .container-img-left .container-img-left-content img {
+ #contact .container-img .container-img-left .container-img-left-content .logo-contact {
    float: right;
+   width: 100px;
+   border-bottom: 1px solid var(--cor-principal-text);
  }
 
  #contact .container-img .container-img-right {
@@ -650,10 +677,11 @@
    display: flex;
    justify-content: space-between;
    width: 95%;
+   align-items: center;
  }
 
  #contact .container-img .container-img-bottom .container-img-bottom-content p {
-   font-size: 1.5rem;
+   font-size: 1.3rem;
    width: 60%;
    margin-left: 3rem;
  }
@@ -740,6 +768,7 @@
    #review .review-all-cards .review-card-top-img {
      display: none;
    }
+
    #cards #cards-left {
      margin-left: 0;
    }
@@ -1095,8 +1124,8 @@
  /* "USER1"  Photo by <a href="https://unsplash.com/@linkedinsalesnavigator?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">LinkedIn Sales Solutions</a> on <a href="https://unsplash.com/photos/pAtA8xe_iVM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   */
 
-  /*"USER2" Photo by <a href="https://unsplash.com/@aniitonishvili?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ana Itonishvili</a> on <a href="https://unsplash.com/photos/Fyl8sMC2j2Q?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ /*"USER2" Photo by <a href="https://unsplash.com/@aniitonishvili?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ana Itonishvili</a> on <a href="https://unsplash.com/photos/Fyl8sMC2j2Q?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
    */
 
-   /* "USER3" Photo by <a href="https://unsplash.com/@eugabrielsilverio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gabriel Silvério</a> on <a href="https://unsplash.com/photos/u3WmDyKGsrY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+ /* "USER3" Photo by <a href="https://unsplash.com/@eugabrielsilverio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gabriel Silvério</a> on <a href="https://unsplash.com/photos/u3WmDyKGsrY?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
    */
