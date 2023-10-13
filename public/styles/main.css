@@ -596,6 +596,7 @@
  #review .review-all-cards .review-card-top-img {
    background-image: url("../assets/images/review.jpg");
    background-size: cover;
+   height: 280px;
  }
 
  #review .review-all-cards .review-card-bot {
