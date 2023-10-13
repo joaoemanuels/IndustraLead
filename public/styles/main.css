@@ -33,7 +33,7 @@
 
  main {
    width: 85%;
-   margin: 90px auto 0 auto;
+   margin: 0 auto;
  }
 
 
@@ -87,7 +87,7 @@
  /* -------------------- Estilos para a barra de navegação (nav)  -------------------- */
 
  nav {
-   padding: 0 15%;
+   padding: 0 7%;
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -99,7 +99,7 @@
    transition: 0.3s;
    position: fixed;
    backdrop-filter: blur(60px);
-   z-index: 2;
+   z-index: 100;
    box-shadow: -10px 5px 10px 5px rgba(0, 0, 0, 0.5);
  }
 
@@ -144,6 +144,9 @@
 
 
  /* -------------------- Estilos do Conteúdo Principal -------------------- */
+ #home .space {
+   height: 90px;
+ }
 
  #home h2 {
    margin-top: 1rem;
@@ -201,28 +204,32 @@
 
  /* -------------------- Estilos para as seções principais do conteúdo (article, section) -------------------- */
 
- #cards {
+ #cards .space {
+   height: 30px;
+ }
+
+ #cards .cards-both {
    display: grid;
    grid-template-columns: 1fr 1fr;
    margin-top: 6rem;
  }
 
- #cards #cards-left {
+ #cards .cards-both #cards-left {
    width: 80%;
    margin-left: 3rem;
  }
 
- #cards #cards-left .card-content {
+ #cards .cards-both #cards-left .card-content {
    display: flex;
    align-items: center;
  }
 
- #cards #cards-left .card-content p {
+ #cards .cards-both #cards-left .card-content p {
    margin-left: 1rem;
    font-size: 1rem;
  }
 
- #cards #cards-left .card-content .card-item {
+ #cards .cards-both #cards-left .card-content .card-item {
    width: 220px;
    height: 100px;
    border-radius: 7px;
@@ -235,39 +242,39 @@
    box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.5);
  }
 
- #cards #cards-left .card-content .card-item p {
+ #cards .cards-both #cards-left .card-content .card-item p {
    font-size: 3rem;
  }
 
- #cards #cards-right {
+ #cards .cards-both #cards-right {
    width: 100%;
  }
 
- #cards #cards-right .card-content-right {
+ #cards .cards-both #cards-right .card-content-right {
    height: 200px;
    border-radius: 7px;
    margin-bottom: 1rem;
    box-shadow: -10px 5px 10px rgba(0, 0, 0, 0.5);
  }
 
- #cards #cards-right .card-content-right img {
+ #cards .cards-both #cards-right .card-content-right img {
    padding: 10px;
    float: right;
    width: 70px;
    height: 70px;
  }
 
- #cards #cards-right .card-content-right .card-content-right-text {
+ #cards .cards-both #cards-right .card-content-right .card-content-right-text {
    clear: both;
    width: 80%;
    margin-left: 3rem;
  }
 
- #cards #cards-right .card-content-right .card-content-right-text h3 {
+ #cards .cards-both #cards-right .card-content-right .card-content-right-text h3 {
    color: var(--cor-principal-subtitles);
  }
 
- #cards #cards-right .card-content-right .card-content-right-text p {
+ #cards .cards-both #cards-right .card-content-right .card-content-right-text p {
    margin-top: 1.5rem;
    line-height: 1.3rem;
    color: var(--cor-second-text);
@@ -276,8 +283,10 @@
 
  /*-----Sobre mim-----*/
 
- #gallery {
-   margin-top: 1rem;
+
+
+ #gallery .space {
+   height: 70px;
  }
 
  #gallery>div {
@@ -383,7 +392,10 @@
 
  #propos {
    margin-left: 3rem;
-   margin-top: 4rem;
+ }
+
+ #propos .space {
+   height: 80px;
  }
 
  #propos>h2 {
@@ -423,10 +435,11 @@
  }
 
  #propos .propos-lines {
-   height: 350px;
+   height: min-content;
    width: 40%;
    margin-left: 50%;
    margin-top: 5rem;
+   margin-bottom: 2rem;
  }
 
  #propos .propos-lines .container p {
@@ -445,10 +458,13 @@
 
  /*-----Projetos-----*/
 
+ #experience .space {
+   height: 60px;
+ }
+
  #experience .container {
    display: flex;
    align-items: center;
-   margin-top: 3rem;
  }
 
  #experience .container span {
@@ -508,11 +524,13 @@
 
 
  /*-----Review-----*/
+ #review .space {
+   height: 90px;
+ }
 
  #review .container {
    display: flex;
    align-items: center;
-   margin-top: 3.5rem;
  }
 
  #review .container span {
@@ -591,8 +609,8 @@
 
  /*-----Contact-----*/
 
- #contact {
-   margin-top: 6rem;
+ #contact .space {
+   height: 90px;
  }
 
  #contact .container {
@@ -770,7 +788,7 @@
      display: none;
    }
 
-   #cards #cards-left {
+   #cards .cards-both #cards-left {
      margin-left: 0;
    }
 
@@ -795,7 +813,7 @@
      width: 50%;
    }
 
-   #cards #cards-right .card-content-right {
+   #cards .cards-both #cards-right .card-content-right {
      height: min-content;
      padding-bottom: 13px;
      border-radius: 7px;
